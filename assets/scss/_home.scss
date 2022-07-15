@@ -1,0 +1,127 @@
+.container-main.home {
+  .title {
+    color: $primary-color;
+    @include aktiv-xbold-font;
+    font-size: 6.25vw;
+    .slacklight {
+      font-family: $slacklight-font;
+      font-weight: 300;
+    }
+  }
+  .subtext {
+    margin-top: 2.083vw;
+    @include pretendard-medium-font;
+    font-size: 1.667vw;
+    line-height: 3vw;
+    letter-spacing: -0.03em;
+  }
+}
+
+.section-main {
+  background-color: $background-color;
+  padding: 56.25vw 10.964vw 8.333vw;
+  background-image: url(../src/img/main_web.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  .title-main {
+    margin: 8.333vw 0 4.167vw;
+  }
+  .txt-main {
+    font-size: 1.667vw;
+    color: $primary-color;
+    @include aktiv-bold-font;
+    line-height: 2.5vw;
+  }
+}
+
+.section-info {
+  padding: 6.25vw 6.25vw 0;
+  .title-info span {
+    display: block;
+    width: fit-content;
+    padding-left: 6.25vw;
+    margin-left: -6.25vw;
+    background-color: $background-color;
+  }
+  .txt-info {
+    width: 50.573vw;
+  }
+  .img-info {
+    width: 100%;
+    margin-top: 4.167vw;
+    border-radius: 1.563vw;
+  }
+  .container-img-list {
+    display: flex;
+    gap: 1.042vw;
+    margin-top: 1.042vw;
+    .card-img {
+      display: flex;
+      flex-direction: column;
+      gap: 1.042vw;
+      width: calc((100% - 3.125vw) / 4);
+      img {
+        border-radius: 3.125vw;
+      }
+      .caption-img {
+        color: $primary-color;
+        @include aktiv-xbold-font;
+        font-size: 1.667vw;
+        word-break: keep-all;
+      }
+    }
+  }
+  .wrapper-logotext {
+    width: 64.219vw;
+    margin: 10.417vw -6.25vw 0 auto;
+    .img-logotext {
+      padding-right: 16.979vw;
+      background-color: $background-color;
+      height: 8.073vw;
+    }
+    .txt-xfame-info {
+      padding-right: 6.25vw;
+    }
+  }
+  .img-xfame-info {
+    width: 100%;
+    margin-top: 2.083vw;
+    border-radius: 1.563vw;
+  }
+}
+
+.section-media {
+  margin: 12.5vw 6.25vw 50px;
+  .title-media {
+    display: inline;
+    margin-left: -6.25vw;
+    padding-left: 13.646vw;
+    background-color: $background-color;
+  }
+  .link-article {
+    display: block;
+  }
+  .link-article {
+    text-align: right;
+    margin-top: 6.823vw;
+  }
+  .article-media {
+    display: flex;
+    width: 100%;
+    margin-top: 1.042vw;
+    border-radius: 1.563vw;
+    overflow: hidden;
+    box-shadow: 0 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+    .imgimg {
+      min-width: 35.833vw;
+      height: auto;
+      background-color: $background-color;
+    }
+    .contentcontent {
+      display: flex;
+      flex-direction: column;
+      padding: 8.099vw 2.083vw;
+    }
+  }
+}

@@ -7,16 +7,6 @@
   overflow: hidden;
 }
 
-.header-nav {
-  // position: fixed;
-  // top: 0;
-  // width: 100vw;
-  transition: all 1s;
-  &.off {
-    transform: translateY(-110%);
-  }
-}
-
 .button-home {
   display: flex;
   justify-content: center;
@@ -29,6 +19,11 @@
   border-radius: 0.625vw;
   background-color: $white;
   box-shadow: 0 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+  transition: all 0.5s;
+  z-index: 99;
+  &.off {
+    transform: translateY(-150%);
+  }
   .img-logo {
     display: block;
     width: 2.604vw;
@@ -45,6 +40,12 @@
   background-color: $white;
   font-size: 0.833vw;
   box-shadow: 0 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+  transition: all 0.5s;
+  z-index: 99;
+
+  &.off {
+    transform: translateY(-150%);
+  }
   .container-link {
     display: flex;
     align-items: center;
@@ -138,8 +139,5 @@
   }
 }
 
-.content-main {
-  // height: 100vh;
-  padding: 7.813vw 2.604vw 0;
-  font-size: 1.042vw;
+.container-main {
 }
