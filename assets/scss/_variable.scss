@@ -1,0 +1,28 @@
+// font-family
+@mixin aktiv-xbold-font {
+  font-family: "aktiv-grotesk-extended", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+@mixin aktiv-bold-font {
+  font-family: "aktiv-grotesk-extended", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+@mixin pretendard-bold-font {
+  font-family: "pretendard", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+@mixin pretendard-medium-font {
+  font-family: "pretendard", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
+$slacklight-font: "slacklight", Helvetica, Arial, sans-serif;
+
+// color
+$primary-color: #6b1fff;
+$secondary-color: #3dd0b8;
+$background-color: #d9d9d9;
+$gray01: #c4c4c4;
+$gray02: #8f8f8f;
+$gray03: #5b5b5b;
+$white: #fff;
+$black: #000;
