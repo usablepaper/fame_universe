@@ -139,5 +139,93 @@
   }
 }
 
-.container-main {
+.footer-main {
+  display: flex;
+  gap: 10.573vw;
+  height: 12.188vw;
+  padding: 2.083vw 6.25vw;
+  background-color: $primary-color;
+  color: $gray00;
+  .wrapper-img-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 11.854vw;
+    }
+  }
+  .wrapper-contact {
+    display: flex;
+    flex-direction: column;
+    dl {
+      display: flex;
+      gap: 2.5vw;
+      margin-bottom: 1.042vw;
+      .txt-contact {
+        @include aktiv-xbold-font;
+        font-size: 0.833vw;
+      }
+      .txt-email {
+        @include aktiv-medium-font;
+        font-size: 0.833vw;
+        line-height: 1.067vw;
+        dd:last-child {
+          margin-top: 0.208vw;
+        }
+      }
+    }
+    .txt-community {
+      margin-bottom: 0.651vw;
+      @include aktiv-xbold-font;
+      font-size: 0.833vw;
+    }
+    .wrapper-link-community {
+      display: flex;
+      gap: 3.385vw;
+      .link-community {
+        position: relative;
+        width: 3.1vw;
+        height: 2.865vw;
+        background-image: url(../src/img/sns_sprite_footer.svg);
+        background-repeat: no-repeat;
+        background-size: auto 2.8vw;
+        &.instagram {
+          background-position: -0.05vw 0;
+        }
+        &.discord {
+          background-position: -5.7vw 0;
+        }
+        &.twitter {
+          background-position: -11.4vw 0;
+        }
+        &.telegram {
+          background-position: -17.1vw 0;
+        }
+        &.medium {
+          background-position: -22.8vw 0;
+        }
+        a {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .wrapper-txt-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26.042vw;
+    font-size: 0.833vw;
+    .content-footer {
+      @include pretendard-medium-font;
+      line-height: 1.25vw;
+    }
+    .content-copyright {
+      @include aktiv-xbold-font;
+      line-height: 1.067vw;
+    }
+  }
 }

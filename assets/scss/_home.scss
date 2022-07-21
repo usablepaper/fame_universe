@@ -1,4 +1,14 @@
 .container-main.home {
+  padding-bottom: 6.25vw;
+  .container-video {
+    position: relative;
+    overflow: hidden;
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
   .title {
     color: $primary-color;
     @include aktiv-xbold-font;
@@ -19,15 +29,32 @@
 
 .section-main {
   background-color: $background-color;
-  padding: 56.25vw 10.964vw 8.333vw;
-  background-image: url(../src/img/main_web.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+  .container-video.main {
+    padding-top: 56.25%;
+    .gradient {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 56.25vw;
+      background: linear-gradient(
+        180deg,
+        rgba(217, 217, 217, 0) 47.4%,
+        #d9d9d9 94.19%
+      );
+      z-index: 99;
+    }
+    video {
+      width: 100vw;
+      transform: translateY(-22%);
+    }
+  }
   text-align: center;
   .title-main {
     margin: 8.333vw 0 4.167vw;
+    padding: 0 10.964vw;
   }
   .txt-main {
+    padding: 0 10.964vw 8.333vw;
     font-size: 1.667vw;
     color: $primary-color;
     @include aktiv-bold-font;
@@ -47,24 +74,33 @@
   .txt-info {
     width: 50.573vw;
   }
-  .img-info {
-    width: 100%;
+  .container-video.info {
+    padding-top: 50%;
     margin-top: 4.167vw;
     border-radius: 1.563vw;
+    video {
+      width: 100%;
+      transform: translateY(-2%);
+    }
   }
-  .container-img-list {
+  .container-video-list {
     display: flex;
     gap: 1.042vw;
     margin-top: 1.042vw;
-    .card-img {
+    .card-video {
       display: flex;
       flex-direction: column;
       gap: 1.042vw;
       width: calc((100% - 3.125vw) / 4);
-      img {
-        border-radius: 3.125vw;
+      .container-video.info {
+        padding-top: 100%;
+        margin-top: 0;
+        border: 1px solid black;
+        video {
+          // height: 500px;
+        }
       }
-      .caption-img {
+      .caption-video {
         color: $primary-color;
         @include aktiv-xbold-font;
         font-size: 1.667vw;
@@ -72,9 +108,13 @@
       }
     }
   }
+}
+
+.section-xfame {
+  padding: 10.417vw 6.25vw 0;
   .wrapper-logotext {
     width: 64.219vw;
-    margin: 10.417vw -6.25vw 0 auto;
+    margin: 0 -6.25vw 0 auto;
     .img-logotext {
       padding-right: 16.979vw;
       background-color: $background-color;
@@ -85,14 +125,21 @@
     }
   }
   .img-xfame-info {
-    width: 100%;
+    position: relative;
+    height: 37.5vw;
     margin-top: 2.083vw;
     border-radius: 1.563vw;
+    overflow: hidden;
+    img {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
   }
 }
 
 .section-media {
-  margin: 12.5vw 6.25vw 50px;
+  padding: 12.5vw 6.25vw 0;
   .title-media {
     display: inline;
     margin-left: -6.25vw;
@@ -101,10 +148,11 @@
   }
   .link-article {
     display: block;
-  }
-  .link-article {
     text-align: right;
     margin-top: 6.823vw;
+    @include aktiv-xbold-font;
+    font-size: 1.25vw;
+    color: $gray02;
   }
   .article-media {
     display: flex;
@@ -113,15 +161,180 @@
     border-radius: 1.563vw;
     overflow: hidden;
     box-shadow: 0 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
-    .imgimg {
+    .img-article {
       min-width: 35.833vw;
       height: auto;
-      background-color: $background-color;
+      background-image: url(../src/img/FAME_XFAME_Banner.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
     }
-    .contentcontent {
+    .wrapper-content-article {
       display: flex;
       flex-direction: column;
+      gap: 2.083vw;
       padding: 8.099vw 2.083vw;
+      text-align: left;
+      .date-updated {
+        @include aktiv-bold-font;
+        font-size: 1.25vw;
+        color: $gray02;
+      }
+      .title-article {
+        @include aktiv-xbold-font;
+        font-size: 1.667vw;
+        color: $primary-color;
+        line-height: 2.133vw;
+      }
+      .content-article {
+        height: 5.625vw;
+        @include pretendard-medium-font;
+        line-height: 1.875vw;
+        color: $gray03;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .txt-article {
+        @include pretendard-medium-font;
+        font-size: 1.25vw;
+        column-rule: $gray02;
+      }
+    }
+  }
+}
+
+.section-team {
+  padding: 12.5vw 6.25vw 0;
+  .title-team {
+    display: block;
+    width: 72.917vw;
+    margin: 0 -6.25vw 0 20.99vw;
+    background-color: $background-color;
+  }
+  .container-team {
+    margin-top: 4.167vw;
+    .list-members {
+      // box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.042vw;
+      .card-member {
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: column;
+        width: 21.094vw;
+        margin-bottom: 1.042vw;
+        padding: 1.042vw;
+        border-radius: 0.625vw;
+        box-shadow: 0 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+        .txt-position {
+          color: $primary-color;
+          @include aktiv-xbold-font;
+          font-size: 1.25vw;
+          line-height: 1.875vw;
+        }
+        .txt-name {
+          @include pretendard-medium-font;
+          color: $gray03;
+          line-height: 1.875vw;
+          font-size: 1.25vw;
+        }
+        .link-member {
+          display: flex;
+          gap: 0.521vw;
+          width: fit-content;
+          margin-top: 0.521vw;
+          padding: 0.625vw 0.521vw;
+          border: 1px solid $secondary-color;
+          border-radius: 2.656vw;
+          @include aktiv-bold-font;
+          color: $secondary-color;
+          font-size: 0.833vw;
+          line-height: 1.067vw;
+          &::before {
+            content: "";
+            display: block;
+            width: 1.25vw;
+            height: 1.053vw;
+            background-image: url(../src/img/linktree.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-alliances {
+  padding: 12.5vw 6.25vw 0;
+  .title-alliances {
+    display: inline;
+    margin-left: -6.25vw;
+    padding-left: 6.25vw;
+    background-color: $background-color;
+  }
+  .container-alliances {
+    margin-top: 2.865vw;
+    .list-alliances {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.042vw;
+      .item-alliance {
+        width: 21.094vw;
+        height: 14.583vw;
+        background-repeat: no-repeat;
+        background-position: center;
+        &.seoul_shwrm {
+          background-image: url(../src/img/alliances/seoul_shwrm.svg);
+          background-size: 7.292vw 7.292vw;
+        }
+        &.D3D {
+          background-image: url(../src/img/alliances/D3D.svg);
+          background-size: 10.781vw 5.625vw;
+        }
+        &.UB_partners {
+          background-image: url(../src/img/alliances/UB_partners.svg);
+          background-size: 9.844vw 7.604vw;
+        }
+        &.SEWORKS {
+          background-image: url(../src/img/alliances/SEWORKS.svg);
+          background-size: 13.49vw 1.354vw;
+        }
+        &.CONLAB_COMPANY {
+          background-image: url(../src/img/alliances/CONLAB_COMPANY.svg);
+          background-size: 13.177vw 5vw;
+        }
+        &.PULSE9 {
+          background-image: url(../src/img/alliances/PULSE9.svg);
+          background-size: 11.406vw 4.479vw;
+        }
+        &.Epiclions {
+          background-image: url(../src/img/alliances/Epiclions.svg);
+          background-size: 12.448vw 1.667vw;
+        }
+        &.Angry_Polar_Bears {
+          background-image: url(../src/img/alliances/Angry_Polar_Bears.svg);
+          background-size: 9.635vw 10vw;
+        }
+        &.PACEMAKERS {
+          background-image: url(../src/img/alliances/PACEMAKERS.svg);
+          background-size: 12.5vw 5.01vw;
+        }
+        &.Three_Kingdoms {
+          background-image: url(../src/img/alliances/Three_Kingdoms.svg);
+          background-size: 15.156vw 3.177vw;
+        }
+        &.Angry_Bulls_Club {
+          background-image: url(../src/img/alliances/Angry_Bulls_Club.svg);
+          background-size: 11.51vw 8.021vw;
+        }
+      }
     }
   }
 }

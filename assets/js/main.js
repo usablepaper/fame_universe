@@ -1,3 +1,29 @@
+const url =
+  "https://cors-anywhere.herokuapp.com/https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@fameuniverse";
+const header = {
+  rss_url: "https://medium.com/feed/@fameuniverse",
+};
+
+// 최신 포스트 받아오기
+// async function getUser() {
+//   try {
+//     const res = await axios.get(url, {
+//       headers: header,
+//     });
+
+//     let { title, pubDate, thumbnail, content, link } = res.data.items[0];
+//     let contentLength = content.length;
+//     content = content.substring(
+//       content.indexOf("<p>" + 3),
+//       content.indexOf("</p>")
+//     );
+//     console.log(content);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
+// getUser();
+
 const buttonCommunity = document.querySelector(".container-community");
 const listCommunity = document.querySelector(".list-community");
 const buttonMenu = document.querySelector(".button-menu");
