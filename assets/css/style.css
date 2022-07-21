@@ -292,7 +292,7 @@ input:-webkit-autofill:-webkit-autofill, input:-webkit-autofill:-webkit-autofill
 .menubar .container-link .link-menu {
   padding: 1.563vw;
   font-family: "aktiv-grotesk-extended", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   color: #d9d9d9;
 }
 
@@ -305,13 +305,11 @@ input:-webkit-autofill:-webkit-autofill, input:-webkit-autofill:-webkit-autofill
 }
 
 .menubar .container-link .link-menu:hover {
-  color: #5b5b5b;
+  color: #8f8f8f;
 }
 
 .menubar .container-link .link-menu.clicked {
   color: #6b1fff;
-  font-family: "aktiv-grotesk-extended", Helvetica, Arial, sans-serif;
-  font-weight: 800;
 }
 
 .container-community {
@@ -667,7 +665,12 @@ input:-webkit-autofill:-webkit-autofill, input:-webkit-autofill:-webkit-autofill
 .section-info .container-video-list .card-video .container-video.info {
   padding-top: 100%;
   margin-top: 0;
-  border: 1px solid black;
+}
+
+.section-info .container-video-list .card-video .container-video.info video {
+  width: 180%;
+  -webkit-transform: translateX(-22%);
+          transform: translateX(-22%);
 }
 
 .section-info .container-video-list .card-video .caption-video {
@@ -837,7 +840,7 @@ input:-webkit-autofill:-webkit-autofill, input:-webkit-autofill:-webkit-autofill
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 21.094vw;
+  width: calc((100% - 1.042vw * 2) / 3);
   margin-bottom: 1.042vw;
   padding: 1.042vw;
   border-radius: 0.625vw;
@@ -916,7 +919,7 @@ input:-webkit-autofill:-webkit-autofill, input:-webkit-autofill:-webkit-autofill
 }
 
 .section-alliances .container-alliances .list-alliances .item-alliance {
-  width: 21.094vw;
+  width: calc((100% - 1.042vw * 2) / 3);
   height: 14.583vw;
   background-repeat: no-repeat;
   background-position: center;
@@ -975,5 +978,184 @@ input:-webkit-autofill:-webkit-autofill, input:-webkit-autofill:-webkit-autofill
 .section-alliances .container-alliances .list-alliances .item-alliance.Angry_Bulls_Club {
   background-image: url(../src/img/alliances/Angry_Bulls_Club.svg);
   background-size: 11.51vw 8.021vw;
+}
+
+.testwrapper .testvideo {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -11;
+}
+
+.container-main.company .title {
+  display: inline;
+  background-color: #d9d9d9;
+  line-height: 8vw;
+  color: #6b1fff;
+  font-family: "aktiv-grotesk-extended", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 6.25vw;
+}
+
+.container-main.company .title .slacklight {
+  font-family: "slacklight", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.container-main.company .content {
+  font-family: "pretendard", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #6b1fff;
+  font-size: 1.667vw;
+  line-height: 3vw;
+}
+
+.container-main.company .section-main {
+  background-color: transparent;
+  text-align: center;
+}
+
+.container-main.company .section-main .container-gradient {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-main.company .section-main .container-gradient .gradient {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(47.4%, rgba(217, 217, 217, 0)), color-stop(94.19%, #d9d9d9));
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 47.4%, #d9d9d9 94.19%);
+  z-index: 99;
+}
+
+.container-main.company .section-main .wrapper-main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-main.company .section-main .wrapper-main-content .wrapper-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.042vw;
+  margin-top: 2.083vw;
+  font-family: "aktiv-grotesk-extended", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 1.25vw;
+}
+
+.container-main.company .section-main .wrapper-main-content .link-pdf {
+  width: 100%;
+  padding: 1.276vw 0;
+  background-color: #6b1fff;
+  color: #fff;
+  border-radius: 0.625vw;
+}
+
+.container-main.company .section-main .wrapper-main-content .title-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.042vw;
+  color: #fff;
+  background-color: transparent;
+  line-height: 6.25vw;
+}
+
+.container-main.company .section-main .title-main {
+  margin: 0;
+  padding: 0 10.964vw;
+  background-color: #d9d9d9;
+}
+
+.container-main.company .section-main .txt-main {
+  background-color: #d9d9d9;
+  font-size: 1.667vw;
+  color: #6b1fff;
+  font-family: "aktiv-grotesk-extended", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 3vw;
+}
+
+.container-main.company .section-vision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 12.5vw;
+}
+
+.container-main.company .section-vision .title-vision {
+  padding-left: 13.646vw;
+}
+
+.container-main.company .section-vision .content-vision {
+  padding: 1.042vw 6.25vw 1.042vw 3.021vw;
+  background-color: #d9d9d9;
+}
+
+.container-main.company .section-mission {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 12.5vw;
+}
+
+.container-main.company .section-mission .title-mission {
+  padding-right: 6.25vw;
+}
+
+.container-main.company .section-mission .content-mission {
+  padding: 1.042vw 2.969vw 1.042vw 6.25vw;
+  background-color: #d9d9d9;
+}
+
+.container-main.company .section-slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 12.5vw;
+}
+
+.container-main.company .section-slogan .title-slogan {
+  padding-left: 6.25vw;
+}
+
+.container-main.company .section-slogan .wrapper-content {
+  padding: 1.042vw 6.25vw 1.042vw 4.844vw;
+  background-color: #d9d9d9;
+}
+
+.container-main.company .section-slogan .wrapper-content span,
+.container-main.company .section-slogan .wrapper-content h3 {
+  padding: 0;
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */

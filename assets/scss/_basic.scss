@@ -51,7 +51,7 @@
     align-items: center;
     .link-menu {
       padding: 1.563vw;
-      @include aktiv-bold-font;
+      @include aktiv-xbold-font;
       color: $background-color;
       &:first-child {
         padding-right: 0.521vw;
@@ -60,11 +60,10 @@
         padding-left: 0.521vw;
       }
       &:hover {
-        color: $gray03;
+        color: $gray02;
       }
       &.clicked {
         color: $primary-color;
-        @include aktiv-xbold-font;
       }
     }
   }

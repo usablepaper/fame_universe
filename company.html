@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,39 +12,170 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script defer src="./assets/js/main.js"></script>
-    <title>FAME UNIVERSE | company</title>
+    <title>FAME UNIVERSE | fame</title>
   </head>
   <body>
-    <header>
+    <header class="header-nav">
       <h1 class="hidden">FAME UNIVERSE</h1>
-      <nav class="bar-nav">
-        <a href="#" class="link-logo"
-          ><img src="./src/img/logo.svg" alt="logo" class="img-logo"
-        /></a>
-        <ul class="bar-menu">
-          <li><a href="#" class="link-menu-bold">FAME</a></li>
-          <li><a href="#" class="link-menu">MINT</a></li>
-          <li><a href="#" class="link-menu">XFAME</a></li>
-          <li><a href="#" class="link-menu">WHITEPAPER</a></li>
-          <li><a href="#" class="link-menu">WHITEPAPER(KOR)</a></li>
-          <li class="wrapper-list-sns">
-            <button type="button" class="button-list-sns link-menu">
-              JOIN US
-            </button>
-            <ul class="list-sns">
-              <li class="instagram sns">INSTAGRAM</li>
-              <li class="discord sns">DISCORD</li>
-              <li class="twitter sns">TWITTER</li>
-              <li class="telegram sns">TELEGRAM</li>
-              <li class="medium sns">MEDIUM</li>
-            </ul>
-          </li>
-        </ul>
-        <strong class="button-wallet">CONNECT WALLET</strong>
+      <a href="#" class="button-home"
+        ><img
+          src="./assets/src/img/logo.svg"
+          alt="FAME UNIVERSE 로고"
+          class="img-logo"
+      /></a>
+      <nav class="menubar">
+        <div class="container-link">
+          <a href="./index.html" class="link-menu">FAME</a>
+          <a href="./company.html" class="link-menu clicked">COMPANY</a>
+        </div>
+        <div class="container-community">
+          <button type="button" class="button-menu">JOIN OUR COMMUNITY</button>
+          <ul class="list-community">
+            <li class="instagram item-community">INSTAGRAM</li>
+            <li class="discord item-community">DISCORD</li>
+            <li class="twitter item-community">TWITTER</li>
+            <li class="telegram item-community">TELEGRAM</li>
+            <li class="medium item-community">MEDIUM</li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <main class="content-main"></main>
-    <footer></footer>
+    <div class="testwrapper">
+      <video muted autoplay loop muted class="testvideo">
+        <source
+          src="./assets/src/video/COMPANY/COMPANY_cover.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <main class="container-main company">
+      <section class="section-main">
+        <div class="container-gradient">
+          <div class="gradient">
+            <div class="wrapper-main-content">
+              <h1 class="title title-media">
+                <span>FAME</span>
+                <span class="slacklight">UNIVERSE</span>
+              </h1>
+              <div class="wrapper-link">
+                <a
+                  href="https://fameuniverse.xyz/assets/whitepaper.pdf"
+                  class="link-pdf"
+                  target="_blank"
+                  >READ WHITE PAPER</a
+                >
+                <a
+                  href="https://fameuniverse.xyz/assets/whitepaper-ko.pdf"
+                  class="link-pdf"
+                  target="_blank"
+                  >READ WHITE PAPER(KOR)</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-vision">
+        <h2 class="title title-vision">VISION</h2>
+        <p class="content-vision content">
+          지금까지 패션 디자인은, 절차의 복잡성과 산업의 구조적인 문제로 인해,
+          다른 창작물들과 달리 창작자의 권리를 인정받는 것이 매우 어려웠다.<br /><br />
+          우리는 패션의 디지털화가 가속화되고 있는 지금의 중요한 시점에서 과거
+          패션 산업의 이러한 실패를 답습하지 않을 수 있는 방안을 찾고자
+          하였다.<br /><br />
+          우리는 패션 디자인의 핵심 요소를 디지털화하고, NFT로 이를 판매하고
+          활용할 수 있는 표준을 만들었다.<br /><br />우리는 위 표준을 통해
+          패션산업의 가장 큰 이슈인 복제와 위조를 해결하고, 디자이너의 창의적인
+          본연의 BI(Brand Identity)를 디지털 크리에이터와의 협업으로 다양한
+          창작물을 자랑할 수 있는 웹 3.0의 새로운 생태계를 구축한다.
+        </p>
+      </section>
+      <section class="section-mission">
+        <h2 class="title title-mission">MISSION</h2>
+        <p class="content-mission content">
+          페임유니버스는 신진, 기성 브랜드가 창의적인 BI(Brand Identity)를
+          지키며, 여러 크리에이터가 참여하고 소통하는 웹 3.0의 구조를 만든다.
+          첫째, 페임유니버스는 패션산업 내 매우 중요한 축인, 독립 패션 디자이너
+          브랜드가 참여하는 프로토콜이고 환경이며, 이들이 상호 소통할 수 있는
+          독자적인 커뮤니티를 구축한다. 둘째, 페임유니버스는 기성 패션 디자이너
+          브랜드들과 웹 3.0 디지털 크리에이터 협업을 통해 디지털 메타버스를
+          디자인을 기획, 생산, 선보이며, 이를 잠재 투자자들이 구매와 리셀,
+          수익창출을 즐기고 호흡하는 에코시스템이다. 셋째, 페임유니버스는 기존
+          패션산업에서 약자였던 수많은 독립 패션디자이너들, 그들의 디지털
+          창작물을 런치패드를 통해 실제 생산까지 이어지는 구조로 투자자는
+          선구안이라는 재미의 요소를, 디자이너는 그동안 제작해보지 못했던,
+          새로운 창작물을 경험할 수 있다. 넷째, 패션에 대한 관심, 경험 등이 없는
+          크립토들은 페임을 통해 패션 NFT와 실물 상품을 함께 경험할 수 있다.
+        </p>
+      </section>
+      <section class="section-slogan">
+        <h2 class="title title-slogan">SLOGAN</h2>
+        <div class="wrapper-content slogan">
+          <h3 class="title title-slogan">
+            <span>HYPER CONNECTED</span>
+            <span class="slacklight">FASHION METAVERSE</span>
+          </h3>
+          <p class="content-slogan content">
+            Hyper Connected Fashion Metaverse FAME is a Hyper Connected Fashion
+            NFTs & Fashion METAVERSE project that supports fashion designers and
+            digital creators to create, launch, sell and produce their own
+            digital fashion NFTs in connection with physical garments and real
+            world productions. Participants can buy, sell, trade and play with
+            diverse digital fashion NFTs, not to mention the real-world fashion
+            experiences.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-main">
+      <div class="wrapper-img-footer">
+        <img src="./assets/src/img/logo_symbol.svg" alt="" />
+      </div>
+      <div class="wrapper-contact">
+        <dl>
+          <div class="txt-contact">CONTACT</div>
+          <div class="txt-email">
+            <dd>business@fameuniverse.xyz</dd>
+            <dd>creators@fameuniverse.xyz</dd>
+          </div>
+        </dl>
+        <strong class="txt-community">JOIN OUR COMMUNITY</strong>
+        <ul class="wrapper-link-community">
+          <li class="link-community instagram">
+            <a href="#"><span class="hidden">instagram</span></a>
+          </li>
+          <li class="link-community discord">
+            <a href="#"><span class="hidden">discord</span></a>
+          </li>
+          <li class="link-community twitter">
+            <a href="#"><span class="hidden">twitter</span></a>
+          </li>
+          <li class="link-community telegram">
+            <a href="#"><span class="hidden">telegram</span></a>
+          </li>
+          <li class="link-community medium">
+            <a href="#"><span class="hidden">medium</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="wrapper-txt-footer">
+        <p class="content-footer">
+          FAME is a Hyper Connected Fashion NFT protocol that lets fashion
+          designers and digital creators create, launch and sell their own NFTs
+          that lets participants to trade and to play with their NFTs freely.
+        </p>
+        <p class="content-copyright">
+          (C) 2022. FAME GLOBAL Pte. Ltd. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
