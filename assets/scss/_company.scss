@@ -1,5 +1,5 @@
-.testwrapper {
-  .testvideo {
+.container-video-company.background {
+  .video-background-company {
     position: fixed;
     width: 100vw;
     top: 0;
@@ -12,7 +12,8 @@
 .container-main.company {
   .title {
     display: inline;
-    background-color: $background-color;
+    background: rgba(196, 196, 196, 0.6);
+    backdrop-filter: blur(0.521vw);
     line-height: 8vw;
     color: $primary-color;
     @include aktiv-xbold-font;
@@ -46,7 +47,7 @@
           rgba(217, 217, 217, 0) 47.4%,
           #d9d9d9 94.19%
         );
-        z-index: 99;
+        z-index: 98;
       }
     }
     .wrapper-main-content {
@@ -69,6 +70,10 @@
         background-color: $primary-color;
         color: $white;
         border-radius: 0.625vw;
+        transition: background 0.2s;
+        &:hover {
+          background: rgb(48, 0, 143);
+        }
       }
       .title-media {
         display: flex;
@@ -81,10 +86,12 @@
     .title-main {
       margin: 0;
       padding: 0 10.964vw;
-      background-color: $background-color;
+      background: rgba(196, 196, 196, 0.6);
+      backdrop-filter: blur(0.521vw);
     }
     .txt-main {
-      background-color: $background-color;
+      background: rgba(196, 196, 196, 0.6);
+      backdrop-filter: blur(0.521vw);
       font-size: 1.667vw;
       color: $primary-color;
       @include aktiv-bold-font;
@@ -96,12 +103,16 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 12.5vw;
+    margin-top: 100vh;
     .title-vision {
       padding-left: 13.646vw;
+      background: rgba(196, 196, 196, 0.6);
+      backdrop-filter: blur(0.521vw);
     }
     .content-vision {
       padding: 1.042vw 6.25vw 1.042vw 3.021vw;
-      background-color: $background-color;
+      background: rgba(196, 196, 196, 0.6);
+      backdrop-filter: blur(0.521vw);
     }
   }
 
@@ -116,7 +127,8 @@
     }
     .content-mission {
       padding: 1.042vw 2.969vw 1.042vw 6.25vw;
-      background-color: $background-color;
+      background: rgba(196, 196, 196, 0.6);
+      backdrop-filter: blur(0.521vw);
     }
   }
 
@@ -129,7 +141,12 @@
     }
     .wrapper-content {
       padding: 1.042vw 6.25vw 1.042vw 4.844vw;
-      background-color: $background-color;
+      background: rgba(196, 196, 196, 0.6);
+      backdrop-filter: blur(0.521vw);
+      .title {
+        background: transparent;
+        backdrop-filter: blur(0);
+      }
       span,
       h3 {
         padding: 0;

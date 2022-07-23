@@ -1,5 +1,14 @@
+.container-video-fame.background {
+  .video-background-fame {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 50%;
+    z-index: -11;
+  }
+}
+
 .container-main.home {
-  padding-bottom: 6.25vw;
   .container-video {
     position: relative;
     overflow: hidden;
@@ -10,9 +19,10 @@
     }
   }
   .title {
+    display: block;
     color: $primary-color;
     @include aktiv-xbold-font;
-    font-size: 6.25vw;
+    font-size: 5vw;
     .slacklight {
       font-family: $slacklight-font;
       font-weight: 300;
@@ -21,40 +31,25 @@
   .subtext {
     margin-top: 2.083vw;
     @include pretendard-medium-font;
-    font-size: 1.667vw;
+    font-size: 1.25vw;
     line-height: 3vw;
     letter-spacing: -0.03em;
   }
 }
 
 .section-main {
-  background-color: $background-color;
-  .container-video.main {
-    padding-top: 56.25%;
-    .gradient {
-      position: absolute;
-      top: 0;
-      width: 100vw;
-      height: 56.25vw;
-      background: linear-gradient(
-        180deg,
-        rgba(217, 217, 217, 0) 47.4%,
-        #d9d9d9 94.19%
-      );
-      z-index: 99;
-    }
-    video {
-      width: 100vw;
-      transform: translateY(-22%);
-    }
-  }
   text-align: center;
-  .title-main {
-    margin: 8.333vw 0 4.167vw;
-    padding: 0 10.964vw;
+  .wrapper-main {
+    padding: 8.333vw 18.854vw 8.333vw;
+    margin-top: 100vh;
+    background: rgba(196, 196, 196, 0.6);
+    backdrop-filter: blur(0.521vw);
+  }
+  .title-main.title {
+    font-size: 4.167vw;
   }
   .txt-main {
-    padding: 0 10.964vw 8.333vw;
+    padding-top: 4.167vw;
     font-size: 1.667vw;
     color: $primary-color;
     @include aktiv-bold-font;
@@ -63,20 +58,14 @@
 }
 
 .section-info {
-  padding: 6.25vw 6.25vw 0;
+  padding: 6.25vw 12.5vw 0;
+  background-color: $white;
   .title-info span {
     display: block;
-    width: fit-content;
-    padding-left: 6.25vw;
-    margin-left: -6.25vw;
-    background-color: $background-color;
-  }
-  .txt-info {
-    width: 50.573vw;
   }
   .container-video.info {
     padding-top: 50%;
-    margin-top: 4.167vw;
+    margin-top: 2.083vw;
     border-radius: 1.563vw;
     video {
       width: 100%;
@@ -103,53 +92,50 @@
       .caption-video {
         color: $primary-color;
         @include aktiv-xbold-font;
-        font-size: 1.667vw;
-        word-break: keep-all;
+        font-size: 1.25vw;
       }
     }
   }
 }
 
 .section-xfame {
-  padding: 10.417vw 6.25vw 0;
+  padding: 12.5vw 12.5vw 0;
+  background-color: $white;
   .wrapper-logotext {
-    width: 64.219vw;
-    margin: 0 -6.25vw 0 auto;
     .img-logotext {
-      padding-right: 16.979vw;
-      background-color: $background-color;
-      height: 8.073vw;
+      width: 30.625vw;
     }
     .txt-xfame-info {
-      padding-right: 6.25vw;
+      width: 55.99vw;
     }
   }
-  .img-xfame-info {
-    position: relative;
-    height: 37.5vw;
+  .button-xfame {
+    margin-top: 2.083vw;
+    padding: 1.276vw 3.385vw;
+    border-radius: 0.625vw;
+    background-color: $primary-color;
+    color: $white;
+    @include aktiv-xbold-font;
+    font-size: 1.25vw;
+  }
+  .container-video.xfame {
+    padding-top: 50%;
     margin-top: 2.083vw;
     border-radius: 1.563vw;
-    overflow: hidden;
-    img {
+
+    video {
       width: 100%;
-      position: absolute;
-      bottom: 0;
     }
   }
 }
 
 .section-media {
-  padding: 12.5vw 6.25vw 0;
-  .title-media {
-    display: inline;
-    margin-left: -6.25vw;
-    padding-left: 13.646vw;
-    background-color: $background-color;
-  }
+  padding: 12.5vw 12.5vw 0;
+  background-color: $white;
   .link-article {
     display: block;
     text-align: right;
-    margin-top: 6.823vw;
+    margin-top: 40px;
     @include aktiv-xbold-font;
     font-size: 1.25vw;
     color: $gray02;
@@ -193,7 +179,6 @@
         color: $gray03;
         overflow: hidden;
         text-overflow: ellipsis;
-        word-break: break-word;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -208,17 +193,11 @@
 }
 
 .section-team {
-  padding: 12.5vw 6.25vw 0;
-  .title-team {
-    display: block;
-    width: 72.917vw;
-    margin: 0 -6.25vw 0 20.99vw;
-    background-color: $background-color;
-  }
+  padding: 12.5vw 12.5vw 7.292vw;
+  background-color: $white;
   .container-team {
-    margin-top: 4.167vw;
+    margin: 2.083vw 0 4.167vw;
     .list-members {
-      // box-sizing: border-box;
       display: flex;
       flex-wrap: wrap;
       gap: 1.042vw;
@@ -226,11 +205,11 @@
         flex-wrap: wrap;
         display: flex;
         flex-direction: column;
-        width: calc((100% - 1.042vw * 2) / 3);
+        width: calc((100% - 1.042vw * 3) / 4);
         margin-bottom: 1.042vw;
         padding: 1.042vw;
         border-radius: 0.625vw;
-        box-shadow: 0 0.208vw 0.208vw rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0.313vw 0.625vw 0 #00000040;
         .txt-position {
           color: $primary-color;
           @include aktiv-xbold-font;
@@ -244,26 +223,15 @@
           font-size: 1.25vw;
         }
         .link-member {
-          display: flex;
-          gap: 0.521vw;
-          width: fit-content;
+          width: 7.083vw;
+          height: 2.292vw;
           margin-top: 0.521vw;
-          padding: 0.625vw 0.521vw;
-          border: 1px solid $secondary-color;
           border-radius: 2.656vw;
           @include aktiv-bold-font;
-          color: $secondary-color;
           font-size: 0.833vw;
           line-height: 1.067vw;
-          &::before {
-            content: "";
-            display: block;
-            width: 1.25vw;
-            height: 1.053vw;
-            background-image: url(../src/img/linktree.svg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+          img {
+            width: 100%;
           }
         }
       }
@@ -272,67 +240,54 @@
 }
 
 .section-alliances {
-  padding: 12.5vw 6.25vw 0;
-  .title-alliances {
-    display: inline;
-    margin-left: -6.25vw;
-    padding-left: 6.25vw;
-    background-color: $background-color;
+  padding: 2.083vw 12.5vw 6.25vw;
+  background-color: $primary-color;
+  .title-alliances.title {
+    color: $gray01;
   }
   .container-alliances {
-    margin-top: 2.865vw;
+    margin-top: 2.083vw;
     .list-alliances {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.042vw;
       .item-alliance {
-        width: calc((100% - 1.042vw * 2) / 3);
+        width: calc((100% - 2.083vw * 3) / 4);
         height: 14.583vw;
         background-repeat: no-repeat;
         background-position: center;
+        background-size: cover;
         &.seoul_shwrm {
           background-image: url(../src/img/alliances/seoul_shwrm.svg);
-          background-size: 7.292vw 7.292vw;
         }
         &.D3D {
           background-image: url(../src/img/alliances/D3D.svg);
-          background-size: 10.781vw 5.625vw;
         }
         &.UB_partners {
           background-image: url(../src/img/alliances/UB_partners.svg);
-          background-size: 9.844vw 7.604vw;
         }
         &.SEWORKS {
           background-image: url(../src/img/alliances/SEWORKS.svg);
-          background-size: 13.49vw 1.354vw;
         }
         &.CONLAB_COMPANY {
           background-image: url(../src/img/alliances/CONLAB_COMPANY.svg);
-          background-size: 13.177vw 5vw;
         }
         &.PULSE9 {
           background-image: url(../src/img/alliances/PULSE9.svg);
-          background-size: 11.406vw 4.479vw;
         }
         &.Epiclions {
           background-image: url(../src/img/alliances/Epiclions.svg);
-          background-size: 12.448vw 1.667vw;
         }
         &.Angry_Polar_Bears {
           background-image: url(../src/img/alliances/Angry_Polar_Bears.svg);
-          background-size: 9.635vw 10vw;
         }
         &.PACEMAKERS {
           background-image: url(../src/img/alliances/PACEMAKERS.svg);
-          background-size: 12.5vw 5.01vw;
         }
         &.Three_Kingdoms {
           background-image: url(../src/img/alliances/Three_Kingdoms.svg);
-          background-size: 15.156vw 3.177vw;
         }
         &.Angry_Bulls_Club {
           background-image: url(../src/img/alliances/Angry_Bulls_Club.svg);
-          background-size: 11.51vw 8.021vw;
         }
       }
     }

@@ -6,27 +6,71 @@ const url =
 async function getUser() {
   try {
     const res = await axios.get(url, {});
-    let { title, pubDate, thumbnail, content, link } = res.data.items[0];
-    let contentLength = content.length;
-    const startContent = content.indexOf("<p>") + 3;
-    const stopContent = content.indexOf("</p>");
-    content = content.substring(startContent, stopContent);
-
-    console.log("title:", title);
-    console.log("pubDate:", pubDate);
-    console.log("thumbnail:", thumbnail);
-    console.log("content:", content);
-    console.log("link:", link);
+    const postsArr = res.data.items.slice(0, 5);
+    createArticles(postsArr);
   } catch (err) {
     console.error(err);
   }
 }
 getUser();
 
+function createArticles(arr) {
+  arr.map((post) => {
+    let { title, pubDate, thumbnail, content, link } = post;
+    let contentLength = content.length;
+    const startContent = content.indexOf("<p>") + 3;
+    const stopContent = content.indexOf("</p>");
+    content = content.substring(startContent, stopContent);
+
+    const sectionMedia = document.querySelector(".section-media");
+    const createLink = document.createElement("a");
+    const createArticle = document.createElement("article");
+    const createImg = document.createElement("div");
+    const createWrapper = document.createElement("div");
+    const createTitle = document.createElement("h3");
+    const createContent = document.createElement("p");
+    const createDate = document.createElement("span");
+
+    // 링크 태그 추가
+    sectionMedia.appendChild(createLink);
+    createLink.setAttribute("href", link);
+    createLink.setAttribute("class", "link-article");
+    createLink.innerHTML = "Read more articles on Medium >";
+
+    // article 태그추가
+    createLink.appendChild(createArticle);
+    createArticle.setAttribute("class", "article-media");
+
+    // background img 추가
+    createArticle.appendChild(createImg);
+    createImg.setAttribute("class", "img-article");
+    createImg.style.backgroundImage = `url(${thumbnail})`;
+
+    // wrapper content 추가
+    createArticle.appendChild(createWrapper);
+    createWrapper.setAttribute("class", "wrapper-content-article");
+
+    // date 추가
+    createWrapper.appendChild(createDate);
+    createDate.setAttribute("class", "date-updated");
+    createDate.innerHTML = pubDate;
+
+    // 타이틀 추가
+    createWrapper.appendChild(createTitle);
+    createTitle.setAttribute("class", "title-article");
+    createTitle.innerHTML = title;
+
+    // 본문 추가
+    createWrapper.appendChild(createContent);
+    createContent.setAttribute("class", "content-article");
+    createContent.innerHTML = content;
+  });
+}
+
 // company 페이지 반응형 background video
 addEventListener("DOMContentLoaded", () => {
   function makeVideoResponsible() {
-    const target = document.querySelector(".testvideo");
+    const target = document.querySelector(".video-background-company");
     if (target) {
       const currentRatio = innerWidth / innerHeight;
       const videoRatio = 1.7777777777777777;
@@ -36,6 +80,28 @@ addEventListener("DOMContentLoaded", () => {
       } else {
         target.style.height = "auto";
         target.style.width = "100vw";
+      }
+    }
+  }
+
+  makeVideoResponsible();
+  addEventListener("resize", makeVideoResponsible);
+});
+
+addEventListener("DOMContentLoaded", () => {
+  function makeVideoResponsible() {
+    const target = document.querySelector(".video-background-fame");
+    if (target) {
+      const currentRatio = innerWidth / innerHeight;
+      const videoRatio = 1;
+      if (videoRatio > currentRatio) {
+        target.style.width = "auto";
+        target.style.height = "100vh";
+        target.style.transform = "translate(-50%, 0)";
+      } else {
+        target.style.height = "auto";
+        target.style.width = "100vw";
+        target.style.transform = "translate(-50%, -20%)";
       }
     }
   }
@@ -84,6 +150,10 @@ buttonCommunity.addEventListener("mouseover", () => {
   buttonCommunity.style.backgroundColor = blue;
 });
 
+buttonCommunity.addEventListener("mouseout", () => {
+  buttonCommunity.style.backgroundColor = primary;
+});
+
 // 헤더 스크롤 반응형 이벤트
 const before = [];
 window.addEventListener("scroll", (e) => {
@@ -101,4 +171,7 @@ window.addEventListener("scroll", (e) => {
 });
 
 // 섹션 반응형 이벤트
-ScrollReveal().reveal("section", { distance: "100px", duration: 2000 });
+ScrollReveal().reveal(".index-body section", {
+  distance: "100px",
+  duration: 2000,
+});

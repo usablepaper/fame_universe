@@ -1,3 +1,7 @@
+body {
+  word-break: keep-all;
+}
+
 .hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -74,6 +78,7 @@
   padding: 1.563vw;
   background-color: $primary-color;
   border-radius: 0 0.625vw 0.625vw 0;
+  transition: background 0.2s;
   cursor: pointer;
   .button-menu {
     color: $background-color;
@@ -98,6 +103,7 @@
   }
   .list-community {
     opacity: 0;
+    visibility: hidden;
     position: absolute;
     top: 5.208vw;
     left: 50%;
@@ -109,6 +115,7 @@
     background-color: $white;
     &.on {
       opacity: 100;
+      visibility: visible;
       transition: all 0.5s;
     }
     .item-community {
@@ -139,17 +146,19 @@
 }
 
 .footer-main {
-  display: flex;
-  gap: 10.573vw;
-  height: 12.188vw;
-  padding: 2.083vw 6.25vw;
+  padding: 0 12.5vw;
   background-color: $primary-color;
   color: $gray00;
+  .wrapper-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.167vw 0 4.167vw;
+    border-top: 2px solid $gray01;
+  }
   .wrapper-img-footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
     img {
       width: 11.854vw;
     }
@@ -160,7 +169,7 @@
     dl {
       display: flex;
       gap: 2.5vw;
-      margin-bottom: 1.042vw;
+      margin-bottom: 1.667vw;
       .txt-contact {
         @include aktiv-xbold-font;
         font-size: 0.833vw;
@@ -175,13 +184,13 @@
       }
     }
     .txt-community {
-      margin-bottom: 0.651vw;
+      margin-bottom: 0.625vw;
       @include aktiv-xbold-font;
       font-size: 0.833vw;
     }
     .wrapper-link-community {
       display: flex;
-      gap: 3.385vw;
+      justify-content: space-between;
       .link-community {
         position: relative;
         width: 3.1vw;
