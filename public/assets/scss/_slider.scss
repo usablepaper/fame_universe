@@ -1,0 +1,66 @@
+// BEOMS CSS
+.section-media {
+  padding: 0;
+  h2.title {
+    padding: 12.5vw 12.5vw 0;
+  }
+}
+
+.swiper-slide {
+  padding: 0 12.5vw 4vw 12.5vw;
+}
+
+.swiper-button-next {
+  right: 10vw !important;
+  width: 5vw !important;
+  background: $primary-color;
+  height: 5vw !important;
+  border-radius: 999999px;
+}
+
+.swiper-button-prev {
+  left: 10vw !important;
+  background: $primary-color;
+  width: 5vw !important;
+  height: 5vw !important;
+  border-radius: 999999px;
+}
+
+:root {
+  --swiper-theme-color: white !important;
+  --swiper-navigation-size: 2.5vw !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-weight: 900 !important;
+  position: relative;
+}
+.swiper-button-next:after {
+  left: 0.2vw;
+}
+
+.swiper-button-prev:after {
+  right: 0.2vw;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: 43% !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary-color !important;
+}
+
+.swiper-pagination-bullet {
+  width: 1.042vw !important;
+  height: 1.042vw !important;
+  margin: 0 0.521vw !important;
+  border-radius: 0 !important;
+}
+
+.swiper-button-disabled {
+  opacity: 1 !important;
+  background: rgba(200, 200, 200, 0.7);
+}
