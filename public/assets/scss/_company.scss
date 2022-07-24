@@ -10,45 +10,40 @@
 }
 
 .container-main.company {
+  // 전체 적용
   .title {
-    display: inline;
-    background: rgba(196, 196, 196, 0.6);
+    display: inline-block;
+    padding-left: 12.5vw;
+    background: rgba(196, 196, 196, 0.8);
     backdrop-filter: blur(0.521vw);
-    line-height: 8vw;
+    line-height: 6.4vw;
     color: $primary-color;
     @include aktiv-xbold-font;
-    font-size: 6.25vw;
+    font-size: 5vw;
     .slacklight {
       font-family: $slacklight-font;
       font-weight: 300;
     }
   }
-
   .content {
     @include pretendard-medium-font;
     color: $primary-color;
-    font-size: 1.667vw;
-    line-height: 3vw;
+    font-size: 1.25vw;
+    line-height: 2.25vw;
+    letter-spacing: -0.03em;
   }
 
+  // 메인 섹션
   .section-main {
     background-color: transparent;
     text-align: center;
-    .container-gradient {
-      width: 100vw;
-      height: 100vh;
-      .gradient {
-        position: absolute;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(
-          180deg,
-          rgba(217, 217, 217, 0) 47.4%,
-          #d9d9d9 94.19%
-        );
-        z-index: 98;
-      }
+    .title-main {
+      margin: 0;
+      color: $white;
+      text-shadow: $white 0.01vw 0 0.4vw;
+      background-color: transparent;
+      backdrop-filter: blur(0);
+      font-size: 6.25vw;
     }
     .wrapper-main-content {
       position: absolute;
@@ -69,60 +64,64 @@
           background: rgb(48, 0, 143);
         }
       }
-      .title-media {
-        display: flex;
-        gap: 1.042vw;
-        color: $white;
-        background-color: transparent;
-        line-height: 6.25vw;
-      }
-    }
-    .title-main {
-      margin: 0;
-      padding: 0 10.964vw;
-      background: rgba(196, 196, 196, 0.6);
-      backdrop-filter: blur(0.521vw);
-    }
-    .txt-main {
-      background: rgba(196, 196, 196, 0.6);
-      backdrop-filter: blur(0.521vw);
-      font-size: 1.667vw;
-      color: $primary-color;
-      @include aktiv-bold-font;
-      line-height: 3vw;
     }
   }
 
   .section-vision {
-    display: flex;
-    align-items: flex-start;
     margin-bottom: 12.5vw;
     margin-top: 100vh;
     .title-vision {
-      padding-left: 13.646vw;
-      background: rgba(196, 196, 196, 0.6);
+      background: rgba(196, 196, 196, 0.8);
       backdrop-filter: blur(0.521vw);
     }
-    .content-vision {
-      padding: 1.042vw 6.25vw 1.042vw 3.021vw;
-      background: rgba(196, 196, 196, 0.6);
+    .wrapper-vision {
+      margin-left: 24.115vw;
+      padding: 0 0 2.083vw 2.083vw;
+      background: rgba(196, 196, 196, 0.8);
       backdrop-filter: blur(0.521vw);
-    }
-  }
-
-  .section-mission {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    margin-bottom: 12.5vw;
-
-    .title-mission {
-      padding-right: 6.25vw;
-    }
-    .content-mission {
-      padding: 1.042vw 2.969vw 1.042vw 6.25vw;
-      background: rgba(196, 196, 196, 0.6);
-      backdrop-filter: blur(0.521vw);
+      color: $primary-color;
+      @include aktiv-xbold-font;
+      ol {
+        .txt-vision {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2.083vw;
+          @include pretendard-bold-font;
+          font-size: 1.667vw;
+          .num-vision {
+            margin-right: 2.083vw;
+            font-size: 5vw;
+            line-height: 6.4vw;
+          }
+        }
+      }
+      .container-symbol {
+        display: flex;
+        gap: 2.083vw;
+        .wrapper-symbol {
+          display: flex;
+          flex-direction: column;
+          width: 28.542vw;
+          .txt-symbol {
+            margin-bottom: 0.521vw;
+            line-height: 3vw;
+            letter-spacing: -0.03em;
+          }
+          .wrapper-color {
+            display: flex;
+            align-items: center;
+            gap: 1.042vw;
+            @include pretendard-medium-font;
+            font-size: 1.25vw;
+            line-height: 1.875vw;
+            .box-color {
+              width: 7.813vw;
+              height: 7.813vw;
+              background-color: $primary-color;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -130,14 +129,17 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 12.5vw;
-    .title-slogan {
-      padding-left: 6.25vw;
-    }
     .wrapper-content {
       padding: 1.042vw 6.25vw 1.042vw 4.844vw;
-      background: rgba(196, 196, 196, 0.6);
+      background: rgba(196, 196, 196, 0.8);
       backdrop-filter: blur(0.521vw);
+      .txt-slogan {
+        margin-bottom: 2.083vw;
+        font-size: 3.333vw;
+        line-height: 3.333vw;
+      }
       .title {
+        padding: 0;
         background: transparent;
         backdrop-filter: blur(0);
       }
@@ -145,6 +147,24 @@
       h3 {
         padding: 0;
         margin: 0;
+      }
+    }
+  }
+
+  .section-corporations {
+    .wrapper-corporations {
+      display: flex;
+      flex-shrink: 1;
+      gap: 1.042vw;
+      padding: 4.583vw 2.083vw 6.667vw;
+      background: rgba(196, 196, 196, 0.8);
+      backdrop-filter: blur(0.521vw);
+      img {
+        width: 25%;
+        &:nth-child(2) {
+          width: 50%;
+          flex: 2 1 0;
+        }
       }
     }
   }
